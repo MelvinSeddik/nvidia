@@ -1,0 +1,227 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    min-width: 250px;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+#page{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    height: 80px;
+}
+
+nav{
+    padding: 5% 10% 1em 0
+}
+
+nav a{
+    text-transform: uppercase;
+    padding: 0 2.5em;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: .1px;
+}
+
+#banner{
+    background: url("img/geforce-rtx-2060-gallery-b-641-d@2x.jpg") no-repeat center;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+#banner-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 58, 0, 0.664);
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#banner-btn{
+    background: #6aa821;
+    margin: 6px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+section{
+    justify-content: space-between;
+    padding-top: 1%;
+}
+
+section article{
+    width: 65%;
+}
+
+section article div{
+    align-items: center;
+}
+
+section article img{
+    height: 25px;
+    border: 1px solid black;
+}
+
+section article h1{
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ASIDE */
+section aside{
+    align-items: center;
+    width: 34%;
+    background: #6aa821;
+    color: white;
+    padding: 2% 0;
+}
+
+section aside span{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+section aside figure{
+    margin: 7%;
+    width: 40%;
+}
+
+section aside figure img{
+    width: 100%;
+}
+
+section aside p{
+    width: 90%;
+    margin: .5em auto;
+}
+
+section aside div{
+    margin-top: 3.5em;
+    justify-content: center;
+    width: 100%;
+}
+
+section aside div a{
+    color: white;
+    font-size: 1.5em;
+    padding: 0 12px;
+}
+
+footer{
+    margin: 1em 0;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer div h4{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer div:nth-child(1){
+    width: 25%;
+}
+
+#nom, #email{
+    padding: 6px 2px;
+    margin: 2px 0;
+}
+
+#submit{
+    background: #6aa821;
+    color: white;
+    padding: 8px 12px;
+}
+
+footer div:nth-child(2){
+    width: 35%;
+}
+
+footer div:nth-child(3){
+    width: 35%;
+}
+
+footer figure{
+    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer img{
+    cursor:pointer;
+}
+
+footer div:nth-child(2) figure img{
+    width: 50%;
+    padding: 3px;
+}
+
+footer div:nth-child(3) figure a{
+    width: 33%;
+}
+
+footer div:nth-child(3) figure img{
+    width: 100%;
+}
+
+/*  */
+#modal{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.952);
+    visibility: hidden;
+}
+
+#modal figure{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal figure img{
+    transition: .3s all ease-in-out;
+}
+
+@media only screen and (max-width: 1050px){
+    header nav a{
+        display: none;
+    }
+}
+
