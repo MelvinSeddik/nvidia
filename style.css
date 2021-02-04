@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
     margin: 0;
-    height: 100vh;
     min-width: 250px;
 }
 
@@ -22,6 +22,7 @@ body{
     margin: 0 auto;
 }
 
+/* HEADER */
 header{
     justify-content: space-between;
     align-items: center;
@@ -32,7 +33,8 @@ header img{
 }
 
 nav{
-    padding: 5% 10% 1em 0
+    padding: 5% 10% 1em 0;
+    position: relative;
 }
 
 nav a{
@@ -43,8 +45,19 @@ nav a{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     letter-spacing: .1px;
+    transition: all .2s ease-in-out;
 }
 
+nav a:hover{
+    color: green;
+}
+
+#menu, #close{
+    display: none;
+    cursor: pointer;
+}
+
+/* BANNER */
 #banner{
     background: url("img/geforce-rtx-2060-gallery-b-641-d@2x.jpg") no-repeat center;
     position: relative;
@@ -74,15 +87,29 @@ nav a{
     border-radius: 10px;
     color: white;
     text-decoration: none;
+    transition: all .2s ease-in-out;
 }
 
+#banner-btn:hover{
+    background: #436b15;
+}
+
+/* SECTION */
 section{
     justify-content: space-between;
     padding-top: 1%;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 3px solid #6aa821;
 }
 
 section article{
-    width: 65%;
+    width: 65%;  
+}
+
+section article p{
+    font-size: 1.1em;
+    text-align: justify;
 }
 
 section article div{
@@ -108,8 +135,12 @@ section aside{
     padding: 2% 0;
 }
 
+section aside div:nth-child(1){
+    align-items: center;
+}
+
 section aside span{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -126,24 +157,34 @@ section aside figure img{
 section aside p{
     width: 90%;
     margin: .5em auto;
+    font-size: 1.1em;
 }
 
-section aside div{
+#socials{
     margin-top: 3.5em;
     justify-content: center;
     width: 100%;
 }
 
-section aside div a{
+#socials a{
     color: white;
     font-size: 1.5em;
     padding: 0 12px;
 }
 
+#triangle{
+    position: absolute;
+    color:#6aa821;
+    bottom: -1em;
+    left: 45%;
+    font-size: 2em;
+}
+
+/* FOOTER */
 footer{
-    margin: 1em 0;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 2%;
 }
 
 footer div h4{
@@ -165,11 +206,7 @@ footer div:nth-child(1){
     padding: 8px 12px;
 }
 
-footer div:nth-child(2){
-    width: 35%;
-}
-
-footer div:nth-child(3){
+footer div:nth-child(2), footer div:nth-child(3){
     width: 35%;
 }
 
@@ -196,7 +233,50 @@ footer div:nth-child(3) figure img{
     width: 100%;
 }
 
-/*  */
+#load-content{
+    position: fixed;
+    top: -900%;
+    visibility: hidden;
+    flex-wrap: wrap;
+}
+
+#load-more, #show-less{
+    padding: 6px 15px;
+    background: #6aa821;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    border: 2px solid black;
+    cursor: pointer;
+    text-align: center;
+}
+
+#load-more:hover, #show-less:hover{
+    background: #3a5e11;
+}
+
+#load-content img{
+    width: 50%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+}
+
+.load #load-more{
+    display: none;
+}
+
+.load #load-content{
+    position: unset;
+    visibility: visible;
+}
+
+.load #load-content img{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* GALLERY MODAL */
 #modal{
     height: 100vh;
     width: 100%;
@@ -208,7 +288,7 @@ footer div:nth-child(3) figure img{
 }
 
 #modal figure{
-    width: 70%;
+    min-width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -217,11 +297,184 @@ footer div:nth-child(3) figure img{
 
 #modal figure img{
     transition: .3s all ease-in-out;
+    position: relative;
+    width: 100%;
 }
 
+#close-modal{
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background: rgba(187, 0, 0, 0.692);
+    color: rgb(255, 255, 255);
+    font-size: 2em; 
+}
+
+#close-modal i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 @media only screen and (max-width: 1050px){
+
+    header nav{
+        padding-right: 0;
+    }
+
     header nav a{
-        display: none;
+        padding: 10px;
+    }
+
+    section article{
+        width: 100%;
+    }
+
+    section aside{
+        width: 100%;
+        flex-direction: row!important;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 5% 0 5% 2%
+    }
+
+    section aside figure{
+        width: 80%;
+        margin-top: 20px!important;
+    }
+
+    section aside div:nth-child(1){
+        width: 20%;
+    }
+
+    section aside div:nth-child(2){
+        width: 80%;
+        text-align: justify;
     }
 }
 
+@media only screen and (max-width: 800px){
+    #modal figure{
+        min-width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    footer div:not(#load-content){
+        width: 100%!important;
+        margin-top: 10%;
+    }
+
+    footer div:nth-child(3) figure a{
+        width: 20%;
+        margin: 0 1%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    header nav a{
+        display: none;
+    }
+
+    nav a:hover{
+        color: black;
+    }
+
+    #menu, #close{
+
+        font-size: 1.5em;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 60px;
+        width: 60px;
+        border-radius: 100% 0% 0% 100% / 0% 100% 0% 100%;
+        color: white;
+        z-index: 5;
+        transition: all .2s ease-in-out;
+    }
+
+    #menu:hover{
+        background: #5b9915;
+    }
+
+    .responsive #close:hover{
+        background:rgba(187, 0, 0, 0.692)
+    }
+
+    section aside div:nth-child(2){
+        width: 100%!important;
+    }
+
+    #menu{
+        background: #3b630d;
+        display: inline-block;
+    }
+
+    nav i{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-20%, -80%);
+    }
+
+    .responsive{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.986);
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .responsive a{
+        display: block;
+        color: white;
+        text-align: center;
+        width: 100%;
+        padding: 2em 0;
+        background: #69a821a2;
+        border: 1px solid white;
+    }
+
+    .responsive #menu{
+        display: none;
+    }
+
+    .responsive #close{
+        background: rgb(192, 0, 0);
+        display: block;    
+    }
+    
+    section aside{
+        flex-direction: column!important;
+        align-items: center;
+    }
+
+    section aside div:nth-child(1){
+        width: 100%;
+    }
+
+    section aside figure{
+        width: 20%;
+        min-width: 80px;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 540px){
+    #banner-text{
+        flex-direction: column;
+    }
+}

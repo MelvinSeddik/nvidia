@@ -12,20 +12,22 @@
 <body class="column">
     <div id="page">
         <header class="flex">
-            <img src="img/nvidia-logo.jpg" alt="logo nvidia">
+            <a href="#"><img src="img/nvidia-logo.jpg" alt="logo nvidia"></a>
 
             <nav class="flex">
                 <a href="#">produits</a>
                 <a href="#">gamme rtx</a>
                 <a href="#">support & pilotes</a>
-                <a href="#">contact</a>
+                <a href="#">contact</a>   
+                <label id="menu"><i class="fas fa-bars"></i></label>
+                <label id="close"><i class="fas fa-times"></i></label>
             </nav>
         </header>
 
         <div id="banner">
             <div id="banner-text" class="flex">
                 <span>Plus d'informations sur la gamme GeForce RTX</span>
-                <a href="#" id="banner-btn">Découvrir</a>
+                <a href="#" id="banner-btn">Découvrir &#9654;</a>
             </div>
         </div>
 
@@ -71,31 +73,39 @@
             </article>
 
             <aside class="column">
-                <span>À PROPOS</span>
-                <figure>
-                    <img src="img/Nvidia_logo.svg.png" alt="nvidia">
-                </figure>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit, perferendis et quia
-                    exercitationem neque qui maxime, voluptates, dolore velit beatae consequatur repudiandae explicabo
-                    dolorem eligendi animi praesentium placeat iure. Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Labore, quis temporibus enim saepe praesentium iusto, laboriosam nisi iste dolor sint quia
-                    quidem sequi magni, accusantium vitae tenetur exercitationem natus cum!
-                </p>
+                <div class="column">
+                    <span>À PROPOS</span>
+                    <figure>
+                        <img src="img/nvidia-white.png" alt="nvidia">
+                    </figure>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit, perferendis et quia
+                        exercitationem neque qui maxime, voluptates, dolore velit beatae consequatur repudiandae
+                        explicabo
+                        dolorem eligendi animi praesentium placeat iure. Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit. Labore, quis temporibus enim saepe praesentium iusto, laboriosam nisi iste dolor sint quia
+                        quidem sequi magni, accusantium vitae tenetur exercitationem natus cum!
+                    </p>
 
-                <p>Labore, quis temporibus enim saepe praesentium iusto.</p>
+                    <p>Labore, quis temporibus enim saepe praesentium iusto.</p>
 
-                <p>Quasi fugit, perferendis.</p>
+                    <p>Quasi fugit, perferendis.</p>
 
-                <div class="flex">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-snapchat"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="flex" id="socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-snapchat"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </aside>
+            <div id="triangle">&#9660;</div>
         </section>
 
+        
         <footer class=flex>
             <div>
                 <h4>NEWSLETTER</h4>
@@ -111,9 +121,23 @@
                 <figure class="flex" id="gallery">
                     <img src="img/gallery1.jpg" alt="nvidia">
                     <img src="img/gallery2.jpg" alt="nvidia">
-                    <img src="img/gallery3.jpg" alt="nvidia">
-                    <img src="img/gallery4.jpg" alt="nvidia">
+                    <a id="load-more">VOIR PLUS...</a>
+                    <div id="load-content" class="flex">
+                        <img src="img/gallery3.jpg" alt="nvidia">
+                        <img src="img/gallery4.jpg" alt="nvidia">
+                        <img src="img/gallery5.jpg" alt="nvidia">
+                        <img src="img/gallery6.jpg" alt="nvidia">
+                        <a id="show-less">REDUIRE</a>
+                    </div>
                 </figure>
+
+                <div id="modal">
+                    
+                    <figure>
+                        <label id="close-modal"><i class="fas fa-times"></i></label>
+                        <img src="" alt="">
+                    </figure>       
+                </div>
             </div>
 
             <div>
@@ -124,11 +148,7 @@
                     <a href="https://www.ea.com/fr"><img src="img/ea_logo.png" alt=""></a>
                 </figure>
 
-                <div id="modal">
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                </div>
+
 
             </div>
         </footer>
