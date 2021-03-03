@@ -246,7 +246,7 @@ footer div:nth-child(3) figure img{
     color: white;
     width: 100%;
     text-decoration: none;
-    border: 2px solid black;
+    border-radius: 20px;
     cursor: pointer;
     text-align: center;
 }
